@@ -1,0 +1,37 @@
+{
+  "name": "fusionauth-react-sso-enhanced",
+  "version": "2.0.0",
+  "description": "Enhanced FusionAuth React SSO with MFA and security features",
+  "private": true,
+  "dependencies": {
+    "@fusionauth/typescript-client": "^1.46.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "axios": "^1.5.0",
+    "qrcode": "^1.5.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

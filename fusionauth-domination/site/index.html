@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FusionAuth Doc Domination Portfolio</title>
+    <meta name="description" content="Comprehensive portfolio showcasing advanced FusionAuth documentation solutions, tools, and expertise">
+    <meta name="keywords" content="FusionAuth, documentation, developer experience, portfolio, authentication, technical writing">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="FusionAuth Doc Domination Portfolio">
+    <meta property="og:description" content="Advanced documentation solutions and tools for FusionAuth developers">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fusionauth-domination.netlify.app">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/typescript.min.js"></script>
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            /* Colors */
+            --primary-color: #1a73e8;
+            --secondary-color: #34a853;
+            --accent-color: #fbbc04;
+            --danger-color: #ea4335;
+            
+            /* Neutral colors */
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #2a2a2a;
+            --bg-card: #1e1e1e;
+            
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-muted: #808080;
+            
+            --border-color: #333333;
+            --border-hover: #444444;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+            --gradient-secondary: linear-gradient(135deg, #34a853 0%, #0f9d58 100%);
+            --gradient-accent: linear-gradient(135deg, #fbbc04 0%, #ff9800 100%);
+            --gradient-card: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+            
+            /* Typography */
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 0.75rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            --spacing-3xl: 4rem;
+            
+            /* Border radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            /* Animations */
+            --transition-fast: 0.15s ease-out;
+            --transition-normal: 0.25s ease-out;
+            --transition-slow: 0.35s ease-out;
+        }
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 4rem;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.875rem);
+        }
+
+        p {
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        a:hover {
+            color: #4285f4;
+        }
+
+        code {
+            font-family: var(--font-mono);
+            font-size: 0.875em;
+            background: var(--bg-tertiary);
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Layout components */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .section-title {
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-description {
+            font-size: 1.125rem;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all var(--transition-normal);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--spacing-md) var(--spacing-lg);
+            height: 4rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color var(--transition-fast);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform var(--transition-fast);
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* Hero section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(26, 115, 232, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(52, 168, 83, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(251, 188, 4, 0.1) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .hero-title {
+            margin-bottom: var(--spacing-lg);
+            background: linear-gradient(135deg, #ffffff 0%, #b0b0b0 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-xl);
+            color: var(--text-secondary);
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(26, 115, 232, 0.4);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-secondary);
+            border-color: var(--border-hover);
+            color: var(--text-primary);
+            transform: translateY(-1px);
+        }
+
+        .btn-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform var(--transition-normal);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-hover);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: var(--spacing-lg);
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .card-title {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+
+        .card-description {
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-secondary);
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .card-features li {
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .card-features li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* Grid layouts */
+        .grid {
+            display: grid;
+            gap: var(--spacing-xl);
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        /* Projects section */
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-normal);
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+
+        .project-header {
+            padding: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .project-title {
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .project-type {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-xs);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .tech-tag {
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-content {
+            padding: var(--spacing-lg);
+        }
+
+        .project-actions {
+            display: flex;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-lg);
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+
+        /* Code blocks */
+        .code-block {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: var(--spacing-lg) 0;
+        }
+
+        .code-header {
+            background: var(--bg-secondary);
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .code-title {
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .copy-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all var(--transition-fast);
+        }
+
+        .copy-btn:hover {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+
+        pre {
+            padding: var(--spacing-lg);
+            margin: 0;
+            overflow-x: auto;
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        /* Skills section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .skill-category {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            transition: all var(--transition-normal);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .skill-category h4 {
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: var(--spacing-xs) 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .skill-level {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background: var(--secondary-color);
+        }
+
+        /* ROI Section */
+        .roi-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .metric-card {
+            text-align: center;
+            background: var(--bg-card);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-normal);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: block;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-top: var(--spacing-xs);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: var(--spacing-2xl) 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-section h4 {
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            transition: color var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+            
+            .grid-2,
+            .grid-3,
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 var(--spacing-md);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(2rem);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(2rem);
+            transition: all 0.8s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--border-hover);
+        }
+
+        /* Focus states for accessibility */
+        .btn:focus,
+        .nav-link:focus,
+        a:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            .header,
+            .hero-cta,
+            .footer {
+                display: none;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .card,
+            .project-card {
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --bg-primary: #000000;
+                --bg-secondary: #111111;
+                --bg-card: #111111;
+                --text-primary: #ffffff;
+                --text-secondary: #cccccc;
+                --border-color: #555555;
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .animate-on-scroll {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">📚 FusionAuth Docs Pro</div>
+            <ul class="nav-links">
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#roi" class="nav-link">ROI</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">FusionAuth Documentation Domination</h1>
+            <p class="hero-subtitle">
+                Comprehensive portfolio showcasing advanced documentation solutions, 
+                developer experience innovations, and technical excellence for FusionAuth
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <svg class="btn-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                    </svg>
+                    Explore Projects
+                </a>
+                <a href="https://github.com/your-username/fusionauth-domination" class="btn btn-secondary" target="_blank" rel="noopener">
+                    <svg class="btn-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Portfolio Overview</h2>
+                <p class="section-description">
+                    A comprehensive demonstration of advanced documentation engineering, 
+                    developer experience design, and technical innovation focused on FusionAuth
+                </p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="card-title">Advanced Documentation</h3>
+                    <p class="card-description">
+                        Production-ready documentation samples showcasing complex FusionAuth integrations, 
+                        migration guides, and best practices
+                    </p>
+                    <ul class="card-features">
+                        <li>Keycloak to FusionAuth migration guide</li>
+                        <li>WebAuthn/Passkey implementation</li>
+                        <li>Air-gapped SSO configurations</li>
+                        <li>Enterprise deployment patterns</li>
+                    </ul>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">⚡</div>
+                    <h3 class="card-title">Developer Experience</h3>
+                    <p class="card-description">
+                        Innovative tools and approaches to enhance developer productivity and 
+                        reduce friction in FusionAuth implementation
+                    </p>
+                    <ul class="card-features">
+                        <li>Interactive code components</li>
+                        <li>API verification automation</li>
+                        <li>Smart navigation systems</li>
+                        <li>Performance-optimized toolchain</li>
+                    </ul>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">🤖</div>
+                    <h3 class="card-title">AI-Powered Solutions</h3>
+                    <p class="card-description">
+                        Cutting-edge RAG implementation for intelligent documentation search 
+                        and context-aware assistance
+                    </p>
+                    <ul class="card-features">
+                        <li>Semantic document search</li>
+                        <li>Intelligent answer generation</li>
+                        <li>Source attribution system</li>
+                        <li>Production-ready API</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    Detailed showcase of documentation innovations, tools, and strategic solutions
+                </p>
+            </div>
+            
+            <div class="grid grid-2">
+                <!-- Documentation Samples -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            📖 Documentation Samples
+                            <span class="project-type">Content</span>
+                        </h3>
+                        <p class="project-description">
+                            Production-ready documentation demonstrating complex FusionAuth scenarios
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Markdown</span>
+                            <span class="tech-tag">MDX</span>
+                            <span class="tech-tag">Technical Writing</span>
+                            <span class="tech-tag">API Documentation</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-title">keycloak-migration.md</span>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <pre><code class="language-markdown"># Migrating from Keycloak to FusionAuth
+
+## Executive Summary
+
+This comprehensive guide provides a structured approach 
+to migrating from Keycloak to FusionAuth, addressing 
+common challenges and providing practical solutions...
+
+### Migration Performance Benefits
+- 3x faster token validation
+- 70% reduction in infrastructure costs  
+- Simplified single-service architecture</code></pre>
+                        </div>
+                        <p>Features comprehensive migration strategies, performance optimizations, and enterprise deployment patterns.</p>
+                    </div>
+                    <div class="project-actions">
+                        <a href="docs-samples/" class="btn btn-primary">
+                            <svg class="btn-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path>
+                            </svg>
+                            View Docs
+                        </a>
+                        <a href="docs-samples/REVIEW.md" class="btn btn-secondary">Review Analysis</a>
+                    </div>
+                </div>
+
+                <!-- Example Applications -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            💻 Example Applications
+                            <span class="project-type">Code</span>
+                        </h3>
+                        <p class="project-description">
+                            Complete, runnable examples demonstrating FusionAuth integration patterns
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">OAuth 2.0</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-title">react-sso/App.js</span>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <pre><code class="language-javascript">// Production-ready React SSO integration
+import { FusionAuthProvider, useAuth } from '@fusionauth/react-sdk';
+
+function App() {
+  const { user, login, logout, isAuthenticated } = useAuth();
+  
+  return (
+    &lt;div className="app"&gt;
+      {isAuthenticated ? (
+        &lt;Dashboard user={user} onLogout={logout} /&gt;
+      ) : (
+        &lt;LoginPage onLogin={login} /&gt;
+      )}
+    &lt;/div&gt;
+  );
+}</code></pre>
+                        </div>
+                        <p>Features complete authentication flows, error handling, and production-ready patterns.</p>
+                    </div>
+                    <div class="project-actions">
+                        <a href="example-apps/" class="btn btn-primary">
+                            <svg class="btn-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                            View Code
+                        </a>
+                        <a href="example-apps/node-quickstart/" class="btn btn-secondary">Quick Start</a>
+                    </div>
+                </div>
+
+                <!-- Strategic Roadmaps -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            🗺️ Strategic Roadmaps
+                            <span class="project-type">Strategy</span>
+                        </h3>
+                        <p class="project-description">
+                            Comprehensive roadmaps for documentation modernization and developer experience enhancement
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Strategy</span>
+                            <span class="tech-tag">Planning</span>
+                            <span class="tech-tag">ROI Analysis</span>
+                            <span class="tech-tag">Implementation</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-title">refresh-plan.md</span>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <pre><code class="language-yaml"># Documentation Modernization Strategy
+
+investment: $650K - $850K
+expected_roi: 340% over 24 months
+
+objectives:
+  - Reduce time-to-first-success by 60%
+  - Decrease support tickets by 45%
+  - Increase trial conversion by 25%
+  - Establish competitive advantage
+
+key_initiatives:
+  - AI-powered content generation
+  - Interactive documentation platform
+  - Performance optimization
+  - Community enablement</code></pre>
+                        </div>
+                        <p>Detailed strategic planning with ROI analysis, implementation timelines, and success metrics.</p>
+                    </div>
+                    <div class="project-actions">
+                        <a href="roadmap/" class="btn btn-primary">
+                            <svg class="btn-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                            View Roadmaps
+                        </a>
+                        <a href="roadmap/refresh-plan.md" class="btn btn-secondary">Refresh Plan</a>
+                    </div>
+                </div>
+
+                <!-- RAG Demo -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            🤖 RAG Documentation System
+                            <span class="project-type">AI/ML</span>
+                        </h3>
+                        <p class="project-description">
+                            Advanced RAG implementation for intelligent documentation search and Q&A
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ChromaDB</span>
+                            <span class="tech-tag">OpenAI</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-title">rag.py</span>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <pre><code class="language-python"># Advanced RAG system for FusionAuth docs
+class RAGSystem:
+    def __init__(self, config):
+        self.vector_store = VectorStore(config)
+        self.llm_client = OpenAI()
+        
+    async def query(self, question: str) -> RAGResponse:
+        # Semantic search + context assembly + LLM generation
+        context = await self.retrieve_context(question)
+        response = await self.generate_response(question, context)
+        
+        return RAGResponse(
+            answer=response.answer,
+            sources=response.sources,
+            confidence=response.confidence
+        )</code></pre>
+                        </div>
+                        <p>Production-ready system with semantic search, streaming responses, and comprehensive source attribution.</p>
+                    </div>
+                    <div class="project-actions">
+                        <a href="rag-demo/" class="btn btn-primary">
+                            <svg class="btn-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L3 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.734.99A.996.996 0 0118 6v2a1 1 0 11-2 0v-.277l-1.254.145a1 1 0 11-.992-1.736L14.984 6l-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.732V12a1 1 0 11-2 0v-1.268l-1.246-.864a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.267l1.246.864a1 1 0 11-.992 1.736L3 15.732V17a1 1 0 11-2 0v-2a.996.996 0 01.52-.878L3 13.732V12a1 1 0 011-1zm14 0a1 1 0 011 1v1.732l1.48.846a.996.996 0 01.52.878v2a1 1 0 11-2 0v-1.267l-1.246-.864a1 1 0 11.992-1.736L18 15.732V12a1 1 0 011-1zM9.504 17.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 19.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1z" clip-rule="evenodd"></path>
+                            </svg>
+                            Try Demo
+                        </a>
+                        <a href="rag-demo/README.md" class="btn btn-secondary">Documentation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Technical Expertise</h2>
+                <p class="section-description">
+                    Comprehensive skill set spanning technical writing, developer experience, 
+                    and modern documentation technologies
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category animate-on-scroll">
+                    <h4>
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clip-rule="evenodd"></path>
+                        </svg>
+                        Technical Writing
+                    </h4>
+                    <ul class="skill-list">
+                        <li><span class="skill-level"></span>API Documentation</li>
+                        <li><span class="skill-level"></span>Developer Guides</li>
+                        <li><span class="skill-level"></span>Migration Strategies</li>
+                        <li><span class="skill-level"></span>Architecture Patterns</li>
+                        <li><span class="skill-level"></span>Troubleshooting Guides</li>
+                        <li><span class="skill-level"></span>Best Practices</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category animate-on-scroll">
+                    <h4>
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                        Development
+                    </h4>
+                    <ul class="skill-list">
+                        <li><span class="skill-level"></span>JavaScript/TypeScript</li>
+                        <li><span class="skill-level"></span>React/Next.js</li>
+                        <li><span class="skill-level"></span>Node.js/Python</li>
+                        <li><span class="skill-level"></span>Astro/Hugo/Jekyll</li>
+                        <li><span class="skill-level"></span>Docker/Kubernetes</li>
+                        <li><span class="skill-level"></span>CI/CD Pipelines</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category animate-on-scroll">
+                    <h4>
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        FusionAuth Expertise
+                    </h4>
+                    <ul class="skill-list">
+                        <li><span class="skill-level"></span>Authentication Flows</li>
+                        <li><span class="skill-level"></span>JWT Configuration</li>
+                        <li><span class="skill-level"></span>SAML/OIDC</li>
+                        <li><span class="skill-level"></span>Multi-tenant Setup</li>
+                        <li><span class="skill-level"></span>API Integration</li>
+                        <li><span class="skill-level"></span>Migration Planning</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category animate-on-scroll">
+                    <h4>
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                        </svg>
+                        AI/ML Tools
+                    </h4>
+                    <ul class="skill-list">
+                        <li><span class="skill-level"></span>RAG Systems</li>
+                        <li><span class="skill-level"></span>Vector Databases</li>
+                        <li><span class="skill-level"></span>LLM Integration</li>
+                        <li><span class="skill-level"></span>Semantic Search</li>
+                        <li><span class="skill-level"></span>Content Generation</li>
+                        <li><span class="skill-level"></span>Automation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <section id="roi" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Return on Investment</h2>
+                <p class="section-description">
+                    Quantified impact of documentation excellence on developer productivity, 
+                    support efficiency, and business growth
+                </p>
+            </div>
+            
+            <div class="roi-metrics">
+                <div class="metric-card animate-on-scroll">
+                    <span class="metric-value">60%</span>
+                    <div class="metric-label">Faster Developer Onboarding</div>
+                </div>
+                <div class="metric-card animate-on-scroll">
+                    <span class="metric-value">45%</span>
+                    <div class="metric-label">Reduced Support Tickets</div>
+                </div>
+                <div class="metric-card animate-on-scroll">
+                    <span class="metric-value">340%</span>
+                    <div class="metric-label">3-Year ROI</div>
+                </div>
+                <div class="metric-card animate-on-scroll">
+                    <span class="metric-value">25%</span>
+                    <div class="metric-label">Trial Conversion Increase</div>
+                </div>
+            </div>
+            
+            <div class="grid grid-2" style="margin-top: 3rem;">
+                <div class="card animate-on-scroll">
+                    <h3>Developer Productivity Impact</h3>
+                    <p>Enhanced documentation and tooling reduces implementation time from hours to minutes, enabling developers to achieve faster time-to-value.</p>
+                    <ul class="card-features">
+                        <li>Interactive examples reduce setup time by 70%</li>
+                        <li>AI-powered search improves answer discovery by 3x</li>
+                        <li>Automated API verification prevents integration issues</li>
+                        <li>Migration guides accelerate platform adoption</li>
+                    </ul>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <h3>Business Growth Enablement</h3>
+                    <p>Strategic documentation investments drive measurable improvements in customer acquisition, retention, and satisfaction metrics.</p>
+                    <ul class="card-features">
+                        <li>Improved trial conversion through better onboarding</li>
+                        <li>Reduced churn via comprehensive troubleshooting</li>
+                        <li>Enhanced developer experience drives word-of-mouth</li>
+                        <li>Competitive differentiation through documentation quality</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-description">
+                    Ready to elevate your FusionAuth documentation and developer experience? 
+                    Let's discuss how these solutions can drive your business growth.
+                </p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">📧</div>
+                    <h3 class="card-title">Email</h3>
+                    <p class="card-description">
+                        Reach out for project discussions, collaboration opportunities, 
+                        or technical consultations.
+                    </p>
+                    <a href="mailto:your.email@example.com" class="btn btn-primary">Send Email</a>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">💼</div>
+                    <h3 class="card-title">LinkedIn</h3>
+                    <p class="card-description">
+                        Connect for professional networking, project updates, 
+                        and industry insights.
+                    </p>
+                    <a href="https://linkedin.com/in/yourprofile" class="btn btn-primary" target="_blank" rel="noopener">Connect</a>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">🐙</div>
+                    <h3 class="card-title">GitHub</h3>
+                    <p class="card-description">
+                        Explore the complete codebase, contribute to projects, 
+                        or fork for your own implementations.
+                    </p>
+                    <a href="https://github.com/your-username" class="btn btn-primary" target="_blank" rel="noopener">Follow</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Portfolio</h4>
+                    <ul class="footer-links">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#roi">ROI Analysis</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="docs-samples/">Documentation Samples</a></li>
+                        <li><a href="example-apps/">Example Applications</a></li>
+                        <li><a href="roadmap/">Strategic Roadmaps</a></li>
+                        <li><a href="rag-demo/">RAG Demo</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Technologies</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://fusionauth.io" target="_blank" rel="noopener">FusionAuth</a></li>
+                        <li><a href="https://astro.build" target="_blank" rel="noopener">Astro</a></li>
+                        <li><a href="https://reactjs.org" target="_blank" rel="noopener">React</a></li>
+                        <li><a href="https://openai.com" target="_blank" rel="noopener">OpenAI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:your.email@example.com">Email</a></li>
+                        <li><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://twitter.com/yourhandle" target="_blank" rel="noopener">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FusionAuth Documentation Portfolio. Built with expertise and passion for developer experience.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize syntax highlighting
+        hljs.highlightAll();
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Copy code functionality
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', async function() {
+                const codeBlock = this.closest('.code-block').querySelector('code');
+                const text = codeBlock.textContent;
+                
+                try {
+                    await navigator.clipboard.writeText(text);
+                    this.textContent = 'Copied!';
+                    this.style.color = 'var(--secondary-color)';
+                    
+                    setTimeout(() => {
+                        this.textContent = 'Copy';
+                        this.style.color = '';
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = text;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    this.textContent = 'Copied!';
+                    setTimeout(() => {
+                        this.textContent = 'Copy';
+                    }, 2000);
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        let lastScrollY = window.scrollY;
+        
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > 100) {
+                header.style.background = 'rgba(10, 10, 10, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        // Add loading state for external links
+        document.querySelectorAll('a[target="_blank"]').forEach(link => {
+            link.addEventListener('click', function() {
+                this.style.opacity = '0.7';
+                setTimeout(() => {
+                    this.style.opacity = '1';
+                }, 1000);
+            });
+        });
+
+        // Progressive enhancement for forms
+        if ('serviceWorker' in navigator) {
+            // Service worker registration for offline capability
+            navigator.serviceWorker.register('/sw.js').catch(console.error);
+        }
+
+        // Analytics (placeholder)
+        function trackEvent(eventName, properties = {}) {
+            console.log('Event tracked:', eventName, properties);
+            // Replace with actual analytics implementation
+        }
+
+        // Track button clicks
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                trackEvent('button_click', {
+                    text: this.textContent.trim(),
+                    href: this.href || 'no-href',
+                    section: this.closest('section')?.id || 'unknown'
+                });
+            });
+        });
+
+        // Track section visibility for engagement
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                    trackEvent('section_viewed', {
+                        section: entry.target.id,
+                        timestamp: Date.now()
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('section[id]').forEach(section => {
+            sectionObserver.observe(section);
+        });
+    </script>
+</body>
+</html>
